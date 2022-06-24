@@ -1,0 +1,6 @@
+C:\Users\Laura\OneDrive\Documents\Lab-progetto-finale\FIFO\Design01.cydsn\Design01.cyprj|526112b9-8a43-4d7c-9538-c1e5aab4cac7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|49da7ce4-7c5c-4528-877f-90522c8d0d88
+C:\Users\Laura\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|c1bfdc6e-ad5f-48b4-a2d3-562ab167f00d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|baebd6e2-3737-46c2-9cc9-a258abaa24ce
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d5cbc47f-d3bf-49be-87ec-a0a51e4c6bc2
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|14eef187-f73b-43ca-ba53-7a5c4a9e18cd
