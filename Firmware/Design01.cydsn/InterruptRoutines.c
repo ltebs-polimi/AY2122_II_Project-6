@@ -34,9 +34,16 @@ CY_ISR(Custom_ISR_RX)
             status=SAMPLING;
             ch_received = 0;
             break;
-
+        //Stop the sampling when receive the stop signal 
+        case 'b':
+        case 'B': 
+            status=WAITING; 
+            break;
+            
         default:
             break;
+        
+            
     }
     
 }

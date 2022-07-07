@@ -85,8 +85,8 @@ int main(void)
             control_reg= 0x47; 
             error = I2C_Peripheral_WriteRegister(LIS3DH_DEVICE_ADDRESS,LIS3DH_CTRL_REG1,control_reg);
             
-            //Every 20ms we check if the FIFO register is full
-            //CyDelay(20); 
+            //We check if the FIFO register is full
+            
             u_int8_t fifo_status;
             error=I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS, LIS3DH_FIFO_SRC, &fifo_status);
 
