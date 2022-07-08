@@ -159,7 +159,7 @@ The following are the main steps used in the algorithm:
   <img src="https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/11.png">
 </p>
 
-In order to smooth and compare the data, a Z-normalization is applied. Based on a preliminary analysis of the raw-data plot, we choose only the horizontal component (X,Y axis) of the acceleration to extract the respiration signal, because the Z axis is most influenced by the tone sound vibration of the heart. (2)
+In order to smooth and compare the data, a Z-normalization is applied. Based on a preliminary analysis of the raw-data plot, we choose only the horizontal component (X,Y axis) of the acceleration to extract the respiration signal, because the Z axis is most influenced by the tone sound vibration of the heart. 
 
 Looking to the final aim of the ML analysis, we decide to divide any posture registration of 3 minutes in 3 windows of 60 seconds. In this way, from any registration of each posture, we obtain 3 signals of one minutes enlarging the dataset having 12 signals for each recorded volunteer (instead of 4).
 
@@ -216,9 +216,9 @@ We have filtered transformed raw-data in 60 seconds window applying a cascade of
 
 
 ### Time and frequencies index extraction
-In order to make further analysis on the signal, especially the classification purpose, we create a final dataset in which we report different time and frequencies domain index computed on the signal.  
+In order to make further analysis on the signal, especially the classification purpose, we create a final dataset in which we report different time and frequencies domain index computed on the signal. (The list of index are reported in "index_computation.pdf" file, inside the "data collection" folder) 
 
-After computed the principal index for ML analysis (4) reported in the table, we merge all the created dataset to proceed further.
+After computed the principal index for ML analysis  reported in the table, we merge all the created dataset to proceed further.
 
 ## Machine learning model
 For the classification we explored different ways. 
