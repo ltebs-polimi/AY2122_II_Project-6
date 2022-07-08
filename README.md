@@ -223,6 +223,8 @@ We tried to classify the position from the respiration signal, but the classific
    - Raw data: the data coming from the accelerometer
 
    - Processed data: the data processed to obtain the respiration signal
+   
+   - Processing.py: code to process the data and extract the respiratory features
 
    - GUI.py: the graphical interface for collecting the data
 
