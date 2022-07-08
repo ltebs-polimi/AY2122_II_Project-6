@@ -241,6 +241,8 @@ We tried to classify the position from the respiration signal, but the classific
    1. Linear support vector classifier
    1. Random Forest
 
+We chose to use the linear SVM because it gave the most consistent results: in fact with all the 4 targets we have an accuracy of 60%, but if we use only 3 target the accuracy increases to 80%. It seems reasonable to have only 3 targets because the respiration doesn't change much in the position lateral right and lateral left
+
 ## Repository structure
 - Folder "data collection" contains:
 
@@ -252,7 +254,7 @@ We tried to classify the position from the respiration signal, but the classific
 
    - GUI.py: the graphical interface for collecting the data
 
-   - Python_script: the script for the machine Learning classification
+   - final_script: the script for the machine Learning classification
 
 - Folder "Firmware" contains the PSOC design and workspace and all the files related to them 
 
