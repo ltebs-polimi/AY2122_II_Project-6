@@ -72,12 +72,16 @@ To create the hardware of the system we first realized it on a breadboard and us
 ![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/2.png)
 
 ![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/3.png)
+
 To do so, we realized the schematic and the board design on eagle, selecting the correct components to be used. Once the PCB design was done, we were able to produce the physical board with a process of acid etching, on which we soldered all the components. 
 
 The switch allows to turn on and off the system without removing the battery. Initially there were a voltage divider to reduce the input voltage from 9V to 5V but was replaced with the voltage regulator due to the Bluetooth module not turning on.
 
-![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/4.png)To contain the PCB we designed in Solidworks a case which was then 3D printed. The initial idea was to apply the case to the chest of the subject to acquire the data, but this idea was then discarded due to the high encumbrance of the case.
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/4.png)
+
+To contain the PCB we designed in Solidworks a case which was then 3D printed. The initial idea was to apply the case to the chest of the subject to acquire the data, but this idea was then discarded due to the high encumbrance of the case.
 ![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/5.jpeg)![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/6.jpeg)
+
 The hardware is subdivided into two main parts: PCB and accelerometer. The PCB contain all the physical elements and their connections, while the accelerometer is stitched on a strap and is connected to the PCB through long cables. 
 
 In this way, we apply the strap on the thorax of the subject, reducing the encumbrance and allowing a free movement of the accelerometer, and the case is kept near the acquisition site.
@@ -134,7 +138,9 @@ The main difference between these two methods regards the computation of the res
 
 \1.  Z-TRANSFORM AND WINDOWING
 
-![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/11.png)In order to smooth and compare the data, a Z-normalization is applied. Based on a preliminary analysis of the raw-data plot, we choose only the horizontal component (X,Y axis) of the acceleration to extract the respiration signal, because the Z axis is most influenced by the tone sound vibration of the heart. (2)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/11.png)
+
+In order to smooth and compare the data, a Z-normalization is applied. Based on a preliminary analysis of the raw-data plot, we choose only the horizontal component (X,Y axis) of the acceleration to extract the respiration signal, because the Z axis is most influenced by the tone sound vibration of the heart. (2)
 
 ` `Looking to the final aim of the ML analysis, we decide to divide any posture registration of 3 minutes in 3 windows of 60 seconds. In this way, from any registration of each posture, we obtain 3 signals of one minutes enlarging the dataset having 12 signals for each recorded volunteer (instead of 4).
 
