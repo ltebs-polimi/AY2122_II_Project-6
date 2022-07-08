@@ -11,13 +11,13 @@
 
 
 # Contents
-[Introduction](#https://github.com/ltebs-polimi/AY2122_II_Project-6#introduction)
+[Introduction](#introduction)
 
-[Hardware](#https://github.com/ltebs-polimi/AY2122_II_Project-6#hardware)
+[Hardware](#hardware)
 
-[Firmware](#https://github.com/ltebs-polimi/AY2122_II_Project-6#firmware)
+[Firmware](#firmware)
 
-[Data acquisition](#_Toc107932684)
+[Data acquisition](#data_acquisition)
 
 [Signal processing](#_Toc107932685)
 
