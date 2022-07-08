@@ -4,7 +4,7 @@ The aim is to make the protocol easier for an user.
 We had to sample an accelerometer for 3 minutes while a persone is sleeping in different positions. 
 The user must connect to a port (it is possible also to disconnect from this port and change it or rescan the ports). 
 Then the user must choose the position of the person and then start sampling. 
-After 3 minutes the sampling stops and a '.csv' is saved in the folder automatically in a folder. 
+After 3 minutes the sampling stops and a '.csv' is saved in the folder 'raw_data' automatically. 
 '''
 
 #import the libraries
