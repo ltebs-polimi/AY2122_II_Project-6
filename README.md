@@ -217,3 +217,14 @@ We tried to classify the position from the respiration signal, but the classific
    1. Random Forest
 
 ## Repository structure
+- Folder "data collection" contains:
+
+      - Raw data: the data coming from the accelerometer
+      
+      - Processed data: the data processed to obtain the respiration signal
+      
+      - GUI.py: the graphical interface for collecting the data
+      
+      - Python_script: the script for the machine Learning classification
+      
+- Folder "Firmware" contains the PSOC design and workspace and all the files related to them 
