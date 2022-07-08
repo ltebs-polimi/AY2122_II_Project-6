@@ -17,12 +17,13 @@
 
 [Firmware](#firmware)
 
-[Data acquisition](#data_acquisition)
+[Data acquisition](#data-acquisition)
 
-[Signal processing](#_Toc107932685)
+[Signal processing](#signal-processing)
 
-[Machine learning model](#_Toc107932689)
+[Machine learning model](#machine-learning-model)
 
+[Repository structure](#repository-structure)
 
 
 
