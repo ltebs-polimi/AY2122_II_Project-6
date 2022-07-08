@@ -143,10 +143,10 @@ In order to process the data to extract the respiration signal and consequently 
 
 The main difference between these two methods regards the computation of the respiration rate:
 
-- chest\_2.mat: compute the respiration rate based on pick coating function;
-- F\_br.mat and PY\_file\_BR.py: compute the respiration rate based on fast Fourier transform.
+- The first one compute the respiration rate based on pick coating function;
+- The second one compute the respiration rate based on fast Fourier transform.
 
-We decided to adopt the second approach, basing on literature reviews.
+We decided to adopt the second approach, based on literature reviews.
 
 
 
@@ -216,7 +216,7 @@ We have filtered transformed raw-data in 60 seconds window applying a cascade of
 
 
 ### Time and frequencies index extraction
-In order to make further analysis on the signal, especially the classification purpose, we create a final dataset in which we report different time and frequencies domain index computed on the signal. (The list of index are reported in "index_computation.pdf" file, inside the "data collection" folder) 
+In order to make further analysis on the signal, especially the classification purpose, we create a final dataset in which we report different time and frequencies domain index computed on the signal. (The list of index are reported in "index_computation.pdf" file, inside the "Data_collection" folder) 
 
 After computed the principal index for ML analysis  reported in the table, we merge all the created dataset to proceed further.
 
@@ -225,14 +225,26 @@ For the classification we explored different ways.
 
 First, we tried to classify with the raw data coming from the accelerometer, we reached an accuracy of 100% mainly because of the orientation of the gravity acceleration that gives the major contribute to the signal.  
 
-Then, we used the information about the respiration only to classify the position. 
+Once we have extracted the respiratory signal we tried to perform a multi-classification in two different ways:
+- Using the entire respiratory signal, but this strategy did not perform very well, returning an accuracy of 35%. Analyzing the confusion matrix was evident that the relative positions were almos all misclassified;
+- Using time and frequency indexes
 
-We tried to classify the position from the respiration signal, but the classification didn’t perform very well, so we decided to use the information about the respiration signal (mean, variance...). 
-
+### Data preparation
 1. Univariate analysis: we removed the outlier to the variables that had a Gaussian distribution and we tried to normalize the other distributions. 
-1. Multivariate analysis: we removed from the dataset the variables with high linear correlation and the variables which show a pattern in the bivariate distribution. Then, we performed a PCA.
-1. X and y dataset: after the standardization we split the dataset into y and x. The first one is the dataset containing the target (‘supine’, ‘prone’, ‘lateral R’, ‘lateral L’). The second one is the dataset containing the variables. We divided these datasets into train (70%) and test (30%). 
-1. Machine Learning methods: we explored different ML methods. For each of them we selected the best parameters with a function, in order to perform the best classification. We explore:
+
+<p align="center">
+  <img width="40%" src="https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/15.png">
+</p>
+
+2. Multivariate analysis: we removed from the dataset the variables with high linear correlation and the variables which show a pattern in the bivariate distribution.
+
+<p align="center">
+  <img width="70%" src="https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/16.png">
+</p>
+
+3. X and y dataset: after the standardization we split the dataset into y and x. The first one is the dataset containing the target (‘supine’, ‘prone’, ‘lateral R’, ‘lateral L’). The second one is the dataset containing the variables. We divided these datasets into train (70%) and test (30%). 
+
+4. Machine Learning methods: we explored different ML methods. For each of them we selected the best parameters with a function, in order to perform the best classification. We explored:
    1. KNN (k-Nearest Neighbour)
    1. Decisional Tree
    1. Naïve-Bayes classifier
@@ -241,23 +253,44 @@ We tried to classify the position from the respiration signal, but the classific
    1. Linear support vector classifier
    1. Random Forest
 
-We chose to use the linear SVM because it gave the most consistent results: in fact with all the 4 targets we have an accuracy of 60%, but if we use only 3 target the accuracy increases to 80%. It seems reasonable to have only 3 targets because the respiration doesn't change much in the position lateral right and lateral left
+We chose to use the linear SVM because it gave the most consistent results.
+The classification performed over the four positions returned an accuracy of 63%, and by looking at the confusion matrix we understand that the prone and supine positions are often misclassified, probably because there is no significant difference between the respiratory signal in these situations.
+
+<p align="center">
+  <img width="70%" src="https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/17.png">
+</p>
+
+To improve the classification we tried to merge the "supine" and "prone" positions, to obtain a classification over three classes instead of four. In this way we obtained an enhancement in both the f1 score and confusion matrix, resulting in a better classifier.
+
+<p align="center">
+  <img width="70%" src="https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/18.png">
+</p>
 
 ## Repository structure
-- Folder "data collection" contains:
+- Folder "Bibliography" contains the papers used to determine how to perform signal processing and the optimal signal parameters to be used for the classification
 
-   - Raw data: the data coming from the accelerometer
+- Folder "Data_collection" contains:
 
-   - Processed data: the data processed to obtain the respiration signal
-   
-   - Processing.py: code to process the data and extract the respiratory features
+   - processed_data: the data processed to obtain the respiration signal
+
+   - raw_data: the data coming from the accelerometer
 
    - GUI.py: the graphical interface for collecting the data
 
-   - final_script: the script for the machine Learning classification
+   - final_script: the script for the Machine Learning classification
 
-- Folder "Firmware" contains the PSOC design and workspace and all the files related to them 
+   - index_computation: parameters of the signal used for the classification
+   
+   - processing.py: code to process the data and extract the respiratory features
+
+   - total_proc_py: contains the dataframe used to classify the data
 
 - Folder "Eagle" contains the PCB-related files
 
+- Folder "Firmware" contains the PSOC design and workspace and all the files related to them 
+
 - Folder "SolidWorks" contains the .SLDPRT and .SLDASM files of the 3D-printed case
+
+- Folder "img" contains the images used for the README.md
+
+- File "Hardware documentation" contains the information about the hardware and on how to correctly set it up
