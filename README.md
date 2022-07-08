@@ -11,17 +11,17 @@
 
 
 # Contents
-[Introduction	2](#_Toc107932681)
+[Introduction](#_Toc107932681)
 
-[Hardware	2](#_Toc107932682)
+[Hardware](#_Toc107932682)
 
-[Firmware	4](#_Toc107932683)
+[Firmware](#_Toc107932683)
 
-[Data acquisition	4](#_Toc107932684)
+[Data acquisition](#_Toc107932684)
 
-[Signal processing	5](#_Toc107932685)
+[Signal processing](#_Toc107932685)
 
-[Machine learning model	7](#_Toc107932689)
+[Machine learning model](#_Toc107932689)
 
 
 
