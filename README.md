@@ -1,4 +1,4 @@
-Project 6: Respiration Monitoring in Sleep Positions
+# Project 6: Respiration Monitoring in Sleep Positions
 
 
 
@@ -69,14 +69,16 @@ The components used to perform this project are:
 
 To create the hardware of the system we first realized it on a breadboard and used the connections to design the printed circuit board (PCB). 
 
-![](img\2.png)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/2.png)
 
-![](img\3.png)To do so, we realized the schematic and the board design on eagle, selecting the correct components to be used. Once the PCB design was done, we were able to produce the physical board with a process of acid etching, on which we soldered all the components. 
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/3.png)
+To do so, we realized the schematic and the board design on eagle, selecting the correct components to be used. Once the PCB design was done, we were able to produce the physical board with a process of acid etching, on which we soldered all the components. 
 
 The switch allows to turn on and off the system without removing the battery. Initially there were a voltage divider to reduce the input voltage from 9V to 5V but was replaced with the voltage regulator due to the Bluetooth module not turning on.
 
-![](img\4.png)To contain the PCB we designed in Solidworks a case which was then 3D printed. The initial idea was to apply the case to the chest of the subject to acquire the data, but this idea was then discarded due to the high encumbrance of the case.
-![](img\5.jpeg)![](img\6.jpeg)The hardware is subdivided into two main parts: PCB and accelerometer. The PCB contain all the physical elements and their connections, while the accelerometer is stitched on a strap and is connected to the PCB through long cables. 
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/4.png)To contain the PCB we designed in Solidworks a case which was then 3D printed. The initial idea was to apply the case to the chest of the subject to acquire the data, but this idea was then discarded due to the high encumbrance of the case.
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/5.jpeg)![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/6.jpeg)
+The hardware is subdivided into two main parts: PCB and accelerometer. The PCB contain all the physical elements and their connections, while the accelerometer is stitched on a strap and is connected to the PCB through long cables. 
 
 In this way, we apply the strap on the thorax of the subject, reducing the encumbrance and allowing a free movement of the accelerometer, and the case is kept near the acquisition site.
 ## Firmware
@@ -97,19 +99,19 @@ The protocol for the data acquisition consists in collecting data of 10 people i
 
 To make the procedure easier we implement a graphical interface in which the user can communicate with the device. 
 
-![](img\7.png)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/7.png)
 
 The user has to choose a port and connect to it. The application allows also to rescan the port or disconnect to the port if needed. 
 
-![](img\8.png)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/8.png)
 
 Then the user has to choose the position of the subject and starts the sampling. It is possible also to stop the sampling. 
 
-![](img\9.png)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/9.png)
 
 After three minutes the data is saved as ‘.csv’ in a specific folder. The data are automatically saved and labelled and every sampling has its own file. It is possible to change the position of the subjects and start another sampling. 
 
-![](img\10.png)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/10.png)
 
 The ‘.csv’ file contains all the data of the three axis and the position of the subject. These files will be then processed to obtain the information about the respiratory signal. 
 
@@ -132,7 +134,7 @@ The main difference between these two methods regards the computation of the res
 
 \1.  Z-TRANSFORM AND WINDOWING
 
-![](img\11.png)In order to smooth and compare the data, a Z-normalization is applied. Based on a preliminary analysis of the raw-data plot, we choose only the horizontal component (X,Y axis) of the acceleration to extract the respiration signal, because the Z axis is most influenced by the tone sound vibration of the heart. (2)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/11.png)In order to smooth and compare the data, a Z-normalization is applied. Based on a preliminary analysis of the raw-data plot, we choose only the horizontal component (X,Y axis) of the acceleration to extract the respiration signal, because the Z axis is most influenced by the tone sound vibration of the heart. (2)
 
 ` `Looking to the final aim of the ML analysis, we decide to divide any posture registration of 3 minutes in 3 windows of 60 seconds. In this way, from any registration of each posture, we obtain 3 signals of one minutes enlarging the dataset having 12 signals for each recorded volunteer (instead of 4).
 
@@ -148,7 +150,7 @@ We have filtered transformed raw-data in 60 seconds window applying a cascade of
 | :- | :- |
 
 
-![](img\12.png)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/12.png)
 
 
 
@@ -164,7 +166,7 @@ We have filtered transformed raw-data in 60 seconds window applying a cascade of
 
 
 
-![](img\13.png)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/13.png)
 
 
 
@@ -175,7 +177,7 @@ We have filtered transformed raw-data in 60 seconds window applying a cascade of
 - BR selection: from the filtered signal we compute the Fast Fourier transform in order to make a frequency analysis. Subsequently, computing its power spectrum it is possible to select the breathing rate looking at the range of frequencies corresponding to physiological one (8-40 breath/min). This corresponds to the maximal in that range.
 
 
-![](img\13.png)
+![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/14.png)
 
 
 
