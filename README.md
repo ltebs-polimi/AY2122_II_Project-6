@@ -80,6 +80,7 @@ The switch allows to turn on and off the system without removing the battery. In
 ![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/4.png)
 
 To contain the PCB we designed in Solidworks a case which was then 3D printed. The initial idea was to apply the case to the chest of the subject to acquire the data, but this idea was then discarded due to the high encumbrance of the case.
+
 ![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/5.jpeg)![](https://github.com/ltebs-polimi/AY2122_II_Project-6/blob/master/img/6.jpeg)
 
 The hardware is subdivided into two main parts: PCB and accelerometer. The PCB contain all the physical elements and their connections, while the accelerometer is stitched on a strap and is connected to the PCB through long cables. 
