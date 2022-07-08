@@ -11,11 +11,11 @@
 
 
 # Contents
-[Introduction](#_Toc107932681)
+[Introduction](#https://github.com/ltebs-polimi/AY2122_II_Project-6#introduction)
 
-[Hardware](#_Toc107932682)
+[Hardware](#https://github.com/ltebs-polimi/AY2122_II_Project-6#hardware)
 
-[Firmware](#_Toc107932683)
+[Firmware](#https://github.com/ltebs-polimi/AY2122_II_Project-6#firmware)
 
 [Data acquisition](#_Toc107932684)
 
